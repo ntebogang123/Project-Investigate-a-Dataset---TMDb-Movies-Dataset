@@ -1,96 +1,104 @@
 ## TMDb Movies Dataset Analysis
 
+### Introduction
 
-### Overview
-
-This project involves the analysis of the TMDb Movies Dataset to extract insights and trends from the movie industry. The dataset contains information about movies, including details such as budget, revenue, genres, and release dates.
+Welcome to the Exploratory Data Analysis for the TMDb Movie Dataset! This script delves into the diverse world of movies, utilizing the extensive information provided in the dataset, which includes details about 10,000 movies collected from The Movie Database (TMDb). The dataset spans a range of features, from user ratings and revenue to genres and cast information.
 
 ### Table of Contents
+- [Data Wrangling](#wrangling)
+- [Exploratory Data Analysis](#eda)
+- [Conclusions](#conclusions)
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Data Overview](#data-overview)
-- [Analysis](#analysis)
-- [Results](#results)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+### Data Wrangling
 
-### Installation
+#### Observation from the Dataset
 
-1. Clone the repository:
+1. 9 columns have missing values in the entries.
+2. Currency in revenue and budget columns does not have a unit specified to differentiate from other sets of numbers.
+3. Release date is a datetime type but it is structured as a string.
+4. Only one duplicate is seen in the dataset.
 
-   ```bash
-   git clone https://github.com/ntebogang123/TMDb-Movies-Dataset-Analysis.git
-   ```
+#### Data Cleaning
 
-2. Navigate to the project directory:
+- Removed unnecessary columns.
+- Converted the release date column from string to date format.
+- Removed duplicate values.
+- Replaced zero with NaN in the runtime column.
+- Replaced all values from '0' to NaN in 'budget' and 'revenue' columns, then removed them.
+- Changed the format of budget and revenue columns.
 
-   ```bash
-   cd TMDb-Movies-Dataset-Analysis
-   ```
+### Exploratory Data Analysis
 
-3. Install dependencies:
+#### Research Question 1 - Which movies had the highest and lowest budgets?
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+- Movie with ID 2244 shows the highest budget of $425,000,000.
+- Movie with ID 2618 shows the lowest budget of $1.
 
-### Usage
+#### Research Question 2 - Which movies had the highest and lowest revenue?
 
-1. Open Jupyter Notebook:
+- Movie with ID 1386 (Avatar) shows the highest revenue of $2,781,505,847.
+- Movie with ID 5067 shows the lowest revenue of $2.
 
-   ```bash
-   jupyter notebook
-   ```
+#### Research Question 3 - Which movies had the highest and lowest profit?
 
-2. Open the `TMDb_Movies_Dataset_Analysis.ipynb` file.
+- Movie with ID 1386 (Avatar) shows the highest profit of $2,544,505,847.
+- Movie with ID 2244 shows the lowest profit of -$413,912,431.
 
-3. Follow the instructions and run the cells to perform the analysis.
+#### Research Question 4 - Which movies had the longest and shortest runtime, and how does it relate to revenue?
 
-### Data Overview
+- Movie with ID 2107 shows the longest runtime of 338 minutes.
+- Movie with ID 5162 shows the shortest runtime of 15 minutes.
 
-The TMDb Movies Dataset contains information such as:
+#### Research Question 5 - What kinds of properties are associated with movies that have high revenues?
 
-- Movie title
-- Release date
-- Budget
-- Revenue
-- Genre
-- Runtime
-- Vote average
-- etc.
+- Average Budget: $60 million
+- Average Revenue: $255 million
+- Average Duration: 113 minutes
+- Most Frequent Cast: Tom Cruise, Brad Pitt, Tom Hanks, Sylvester Stallone, Cameron Diaz
+- Successful Genres: Action, Adventure, Thriller, Comedy, Drama
 
-### Analysis
+#### Research Question 6 - What is the average runtime of the movies?
 
-The analysis includes:
+- The average runtime of the movies is approximately 109.22 minutes.
 
-1. Exploratory Data Analysis (EDA) to understand the dataset's characteristics.
-2. Visualization of trends in movie releases over time.
-3. Correlation analysis between budget, revenue, and ratings.
-4. Genre distribution analysis.
+#### Research Question 8 - Which year had the most profitable movies?
 
-### Results
+- The most profitable year was 2015 with a total profit of $19,032,145,273.
 
-The key findings from the analysis are:
+#### Research Question 9 - Which genres are most popular from year to year?
 
-1. Trends in movie releases over the years.
-2. Correlation between budget, revenue, and ratings.
-3. Popular genres and their distribution.
+- The analysis provides a dynamic view of audience preferences and industry trends for different genres over the years.
 
-### Contributing
+### Conclusions
 
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature/your-feature`.
-3. Make your changes and commit: `git commit -m "Description of changes"`.
-4. Push to the branch: `git push origin feature/your-feature`.
-5. Open a pull request.
+1. **Revenue and Budget Distribution:**
+   - The distribution of movie revenue is right-skewed, indicating that a few movies generate significantly higher revenue than the majority.
+   - Movie budgets also exhibit a right-skewed distribution, with most movies having relatively lower budgets.
 
-### License
+2. **Genre Trends:**
+   - The most prevalent movie genres include Drama, Comedy, and Action.
+   - Genre popularity has evolved over the years, with certain genres gaining or losing prominence.
 
-This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/license/mit/) file for details.
+3. **Cast and Revenue:**
+   - Certain actors and actresses appear more frequently in the dataset, suggesting potential star power.
+   - Further analysis is needed to explore the correlation between specific cast members and high movie revenue.
 
-### Acknowledgements
+4. **Budget and Revenue Relationship:**
+   - A positive correlation exists between movie budgets and revenue, indicating that higher-budget movies tend to generate more revenue.
+   - However, other factors may influence revenue, and a more detailed analysis is required.
 
-- Thanks to TMDb for providing the dataset.
-- This project uses Python, Pandas, Matplotlib, and Seaborn for data analysis and visualization.
+5. **Profit Analysis:**
+    - Movie with ID 1386 shows the highest earned profit i.e $254,450,5847.
+    - Movie with ID 2244 shows the lowest earned profit i.e -$413,912,431.
+
+6. **Most Profitable Year:**
+    - The most profitable year was 2015 with a total profit of $19,032,145,273.00.
+
+7. **Genre Popularity Over Time:**
+    - The analysis of genre popularity over the years provides a dynamic view of audience preferences and industry trends.
+
+**Recommendations:**
+- Consider exploring more advanced machine learning models for revenue prediction.
+- Conduct deeper analysis on outlier movies to understand their impact on overall trends.
+- Investigate the influence of specific cast members and directors on movie success.
+- Stay updated on evolving genre preferences and market dynamics for strategic decision-making in the film industry.
