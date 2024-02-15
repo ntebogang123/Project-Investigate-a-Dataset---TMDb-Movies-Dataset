@@ -2,7 +2,6 @@ Certainly! Below is a template for a README file for a project that involves ana
 
 ## TMDb Movies Dataset Analysis
 
-![Data Analysis](link-to-an-image-related-to-your-project)
 
 ### Overview
 
