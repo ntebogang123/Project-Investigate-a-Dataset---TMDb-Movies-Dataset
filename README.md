@@ -94,5 +94,3 @@ This project is licensed under the MIT License - see the [LICENSE](https://opens
 
 - Thanks to TMDb for providing the dataset.
 - This project uses Python, Pandas, Matplotlib, and Seaborn for data analysis and visualization.
-
-Feel free to customize this template based on the specifics of your analysis and the details you want to highlight in your README file.
