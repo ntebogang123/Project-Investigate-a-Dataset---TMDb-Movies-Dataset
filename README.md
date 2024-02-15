@@ -1,5 +1,3 @@
-Certainly! Below is a template for a README file for a project that involves analyzing the TMDb Movies Dataset:
-
 ## TMDb Movies Dataset Analysis
 
 
