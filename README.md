@@ -21,7 +21,7 @@ This project involves the analysis of the TMDb Movies Dataset to extract insight
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/TMDb-Movies-Dataset-Analysis.git
+   git clone https://github.com/ntebogang123/TMDb-Movies-Dataset-Analysis.git
    ```
 
 2. Navigate to the project directory:
