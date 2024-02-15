@@ -30,3 +30,8 @@ The project draws on external resources, including pandas documentation, Geeksfo
 
 **Project Contribution:**
 The analysis covers genre popularity trends, factors associated with high revenues, and ensures clear communication of results. The project is open-ended, promoting flexibility in exploring and presenting findings.
+
+
+   [![Build Status](your-build-status-badge-url)](your-build-status-link)
+   [![License](your-license-badge-url)](your-license-link)
+   [![Version](your-version-badge-url)](your-version-link)
